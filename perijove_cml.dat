@@ -1,0 +1,535 @@
+Perijove time (UTC): 2016/07/05 02:47:38 - In Florida 2016/07/04 22:47:38 
+florida: 
+ 	From 2016/07/04 20:23:10 to 2016/07/04 23:59:54
+	Number of rotations from perijove: -0.24, 0.12
+	Juno CML 32.80 	 MinCML 17.67 	 MaxCML 148.67
+	Difference from Juno Observation: -15.13 115.87
+canary: 
+ 	From 2016/07/04 21:13:52 to 2016/07/05 00:50:02
+	In Florida: 2016/07/04 16:13:52 to 2016/07/04 19:50:02
+	Number of rotations from perijove: -0.66, -0.30
+	Juno CML 32.80 	 MinCML 226.98 	 MaxCML 357.64
+	Difference from Juno Observation: 194.18 324.84
+
+Perijove time (UTC): 2016/08/27 12:51:20 - In Florida 2016/08/27 08:51:20 
+arizona: 
+ 	From 2016/08/26 19:59:17 to 2016/08/26 21:04:35
+	In Florida: 2016/08/26 21:59:17 to 2016/08/26 23:04:35
+	Number of rotations from perijove: -1.10, -0.99
+	Juno CML 96.10 	 MinCML 121.87 	 MaxCML 161.34
+	Difference from Juno Observation: 25.77 65.24
+canary: 
+ 	From 2016/08/27 20:38:27 to 2016/08/27 21:44:38
+	In Florida: 2016/08/27 15:38:27 to 2016/08/27 16:44:38
+	Number of rotations from perijove: 0.69, 0.80
+	Juno CML 96.10 	 MinCML 41.98 	 MaxCML 81.98
+	Difference from Juno Observation: -54.12 -14.12
+
+Perijove time (UTC): 2016/10/19 18:11:07 - In Florida 2016/10/19 14:11:07 
+arizona: 
+ 	From 2016/10/20 06:08:24 to 2016/10/20 07:35:40
+	In Florida: 2016/10/20 08:08:24 to 2016/10/20 09:35:40
+	Number of rotations from perijove: 1.81, 1.96
+	Juno CML 347.90 	 MinCML 327.36 	 MaxCML 20.02
+	Difference from Juno Observation: -20.54 32.12
+
+Perijove time (UTC): 2016/11/02 17:52:29 - In Florida 2016/11/02 13:52:29 
+florida: 
+ 	From 2016/11/03 05:19:56 to 2016/11/03 07:35:17
+	Number of rotations from perijove: 1.56, 1.79
+	Juno CML 284.10 	 MinCML 170.62 	 MaxCML 252.44
+	Difference from Juno Observation: -113.48 -31.66
+arizona: 
+ 	From 2016/11/03 05:26:46 to 2016/11/03 07:46:57
+	In Florida: 2016/11/03 07:26:46 to 2016/11/03 09:46:57
+	Number of rotations from perijove: 1.77, 2.01
+	Juno CML 284.10 	 MinCML 247.29 	 MaxCML 331.94
+	Difference from Juno Observation: -36.81 47.84
+
+Perijove time (UTC): 2016/11/16 16:54:46 - In Florida 2016/11/16 11:54:46 
+florida: 
+ 	From 2016/11/17 03:37:09 to 2016/11/17 06:45:50
+	Number of rotations from perijove: 1.59, 1.90
+	Juno CML 196.70 	 MinCML 90.21 	 MaxCML 204.27
+	Difference from Juno Observation: -106.49 7.57
+arizona: 
+ 	From 2016/11/17 03:44:22 to 2016/11/17 06:59:09
+	In Florida: 2016/11/17 05:44:22 to 2016/11/17 08:59:09
+	Number of rotations from perijove: 1.80, 2.13
+	Juno CML 196.70 	 MinCML 167.11 	 MaxCML 284.78
+	Difference from Juno Observation: -29.59 88.08
+
+Perijove time (UTC): 2016/11/30 15:52:21 - In Florida 2016/11/30 10:52:21 
+florida: 
+ 	From 2016/12/01 02:53:20 to 2016/12/01 06:56:43
+	Number of rotations from perijove: 1.62, 2.03
+	Juno CML 106.50 	 MinCML 9.58 	 MaxCML 156.71
+	Difference from Juno Observation: -96.92 50.21
+cerra: 
+ 	From 2016/12/01 03:49:27 to 2016/12/01 06:33:46
+	In Florida: 2016/12/01 01:49:27 to 2016/12/01 04:33:46
+	Number of rotations from perijove: 1.51, 1.79
+	Juno CML 106.50 	 MinCML 330.96 	 MaxCML 70.30
+	Difference from Juno Observation: 224.46 323.80
+arizona: 
+ 	From 2016/12/01 03:00:53 to 2016/12/01 07:11:17
+	In Florida: 2016/12/01 05:00:53 to 2016/12/01 09:11:17
+	Number of rotations from perijove: 1.83, 2.25
+	Juno CML 106.50 	 MinCML 86.69 	 MaxCML 237.98
+	Difference from Juno Observation: -19.81 131.48
+
+Perijove time (UTC): 2016/12/14 14:49:58 - In Florida 2016/12/14 09:49:58 
+cerra: 
+ 	From 2016/12/15 03:00:41 to 2016/12/15 06:35:54
+	In Florida: 2016/12/15 01:00:41 to 2016/12/15 04:35:54
+	Number of rotations from perijove: 1.53, 1.90
+	Juno CML 16.30 	 MinCML 247.79 	 MaxCML 17.90
+	Difference from Juno Observation: 231.49 361.60
+arizona: 
+ 	From 2016/12/15 02:15:58 to 2016/12/15 07:21:35
+	In Florida: 2016/12/15 04:15:58 to 2016/12/15 09:21:35
+	Number of rotations from perijove: 1.86, 2.38
+	Juno CML 16.30 	 MinCML 5.85 	 MaxCML 190.52
+	Difference from Juno Observation: -10.45 174.22
+
+Perijove time (UTC): 2016/12/28 13:47:35 - In Florida 2016/12/28 08:47:35 
+florida: 
+ 	From 2016/12/29 01:21:10 to 2016/12/29 07:12:59
+	Number of rotations from perijove: 1.67, 2.27
+	Juno CML 286.00 	 MinCML 206.97 	 MaxCML 59.67
+	Difference from Juno Observation: -79.03 133.67
+cerra: 
+ 	From 2016/12/29 02:10:53 to 2016/12/29 06:43:06
+	In Florida: 2016/12/29 00:10:53 to 2016/12/29 04:43:06
+	Number of rotations from perijove: 1.55, 2.01
+	Juno CML 286.00 	 MinCML 164.48 	 MaxCML 329.05
+	Difference from Juno Observation: -121.52 43.05
+arizona: 
+ 	From 2016/12/27 17:31:59 to 2016/12/28 13:01:22
+	In Florida: 2016/12/27 19:31:59 to 2016/12/28 15:01:22
+	Number of rotations from perijove: -1.34, 0.63
+	Juno CML 286.00 	 MinCML 205.36 	 MaxCML 192.25
+	Difference from Juno Observation: -80.64 266.25
+canary: 
+ 	From 2016/12/29 02:11:19 to 2016/12/29 08:03:35
+	In Florida: 2016/12/28 21:11:19 to 2016/12/29 03:03:35
+	Number of rotations from perijove: 1.25, 1.85
+	Juno CML 286.00 	 MinCML 55.92 	 MaxCML 268.89
+	Difference from Juno Observation: -230.08 -17.11
+
+Perijove time (UTC): 2017/01/11 13:59:37 - In Florida 2017/01/11 08:59:37 
+florida: 
+ 	From 2017/01/12 00:32:05 to 2017/01/12 07:15:04
+	Number of rotations from perijove: 1.57, 2.25
+	Juno CML 240.80 	 MinCML 124.61 	 MaxCML 8.25
+	Difference from Juno Observation: -116.19 127.45
+cerra: 
+ 	From 2017/01/12 01:19:48 to 2017/01/12 06:53:51
+	In Florida: 2017/01/11 23:19:48 to 2017/01/12 04:53:51
+	Number of rotations from perijove: 1.45, 2.01
+	Juno CML 240.80 	 MinCML 80.91 	 MaxCML 282.87
+	Difference from Juno Observation: -159.89 42.07
+arizona: 
+ 	From 2017/01/10 17:42:41 to 2017/01/11 12:10:15
+	In Florida: 2017/01/10 19:42:41 to 2017/01/11 14:10:15
+	Number of rotations from perijove: -1.34, 0.52
+	Juno CML 240.80 	 MinCML 159.10 	 MaxCML 108.65
+	Difference from Juno Observation: -81.70 227.85
+canary: 
+ 	From 2017/01/12 01:22:17 to 2017/01/12 08:05:36
+	In Florida: 2017/01/11 20:22:17 to 2017/01/12 03:05:36
+	Number of rotations from perijove: 1.15, 1.83
+	Juno CML 240.80 	 MinCML 333.58 	 MaxCML 217.43
+	Difference from Juno Observation: 92.78 336.63
+
+Perijove time (UTC): 2017/01/25 12:57:12 - In Florida 2017/01/25 07:57:12 
+florida: 
+ 	From 2017/01/25 23:40:32 to 2017/01/26 07:12:01
+	Number of rotations from perijove: 1.59, 2.35
+	Juno CML 150.60 	 MinCML 41.29 	 MaxCML 314.27
+	Difference from Juno Observation: -109.31 163.67
+arizona: 
+ 	From 2017/01/24 17:55:20 to 2017/01/25 11:17:39
+	In Florida: 2017/01/24 19:55:20 to 2017/01/25 13:17:39
+	Number of rotations from perijove: -1.22, 0.54
+	Juno CML 150.60 	 MinCML 114.55 	 MaxCML 24.68
+	Difference from Juno Observation: -36.05 234.08
+canary: 
+ 	From 2017/01/26 00:30:48 to 2017/01/26 08:02:24
+	In Florida: 2017/01/25 19:30:48 to 2017/01/26 03:02:24
+	Number of rotations from perijove: 1.17, 1.93
+	Juno CML 150.60 	 MinCML 250.30 	 MaxCML 163.35
+	Difference from Juno Observation: 99.70 372.75
+
+Perijove time (UTC): 2017/02/08 11:54:47 - In Florida 2017/02/08 06:54:47 
+arizona: 
+ 	From 2017/02/07 18:08:12 to 2017/02/08 10:23:23
+	In Florida: 2017/02/07 20:08:12 to 2017/02/08 12:23:23
+	Number of rotations from perijove: -1.09, 0.55
+	Juno CML 60.40 	 MinCML 70.67 	 MaxCML 300.23
+	Difference from Juno Observation: 10.27 239.83
+
+Perijove time (UTC): 2017/02/22 10:52:21 - In Florida 2017/02/22 05:52:21 
+florida: 
+ 	From 2017/02/21 18:17:57 to 2017/02/22 09:24:35
+	Number of rotations from perijove: -1.17, 0.36
+	Juno CML 330.20 	 MinCML 312.83 	 MaxCML 140.97
+	Difference from Juno Observation: -17.37 170.77
+cerra: 
+ 	From 2017/02/22 22:36:48 to 2017/02/23 07:29:34
+	In Florida: 2017/02/22 20:36:48 to 2017/02/23 05:29:34
+	Number of rotations from perijove: 1.49, 2.39
+	Juno CML 330.20 	 MinCML 187.44 	 MaxCML 149.59
+	Difference from Juno Observation: -142.76 179.39
+canary: 
+ 	From 2017/02/22 22:39:34 to 2017/02/23 07:42:20
+	In Florida: 2017/02/22 17:39:34 to 2017/02/23 02:42:20
+	Number of rotations from perijove: 1.19, 2.10
+	Juno CML 330.20 	 MinCML 80.27 	 MaxCML 48.47
+	Difference from Juno Observation: -249.93 78.27
+
+Perijove time (UTC): 2017/03/08 09:12:44 - In Florida 2017/03/08 04:12:44 
+cerra: 
+ 	From 2017/03/07 20:09:39 to 2017/03/08 10:19:17
+	In Florida: 2017/03/07 18:09:39 to 2017/03/08 08:19:17
+	Number of rotations from perijove: -1.02, 0.42
+	Juno CML 217.50 	 MinCML 257.03 	 MaxCML 50.71
+	Difference from Juno Observation: 39.53 193.21
+
+Perijove time (UTC): 2017/03/22 08:10:19 - In Florida 2017/03/22 04:10:19 
+
+Perijove time (UTC): 2017/04/05 07:07:53 - In Florida 2017/04/05 03:07:53 
+
+Perijove time (UTC): 2017/04/19 06:05:27 - In Florida 2017/04/19 02:05:27 
+canary: 
+ 	From 2017/04/18 20:39:38 to 2017/04/19 07:17:03
+	In Florida: 2017/04/18 15:39:38 to 2017/04/19 02:17:03
+	Number of rotations from perijove: -1.05, 0.02
+	Juno CML 306.80 	 MinCML 338.17 	 MaxCML 3.60
+	Difference from Juno Observation: 31.37 56.80
+
+Perijove time (UTC): 2017/05/03 06:17:26 - In Florida 2017/05/03 02:17:26 
+florida: 
+ 	From 2017/05/02 19:57:57 to 2017/05/03 05:27:45
+	Number of rotations from perijove: -0.64, 0.32
+	Juno CML 261.50 	 MinCML 83.10 	 MaxCML 67.63
+	Difference from Juno Observation: -178.40 166.13
+arizona: 
+ 	From 2017/05/02 20:10:09 to 2017/05/03 05:31:39
+	In Florida: 2017/05/02 22:10:09 to 2017/05/03 07:31:39
+	Number of rotations from perijove: -0.42, 0.53
+	Juno CML 261.50 	 MinCML 163.03 	 MaxCML 142.54
+	Difference from Juno Observation: -98.47 241.04
+canary: 
+ 	From 2017/05/02 20:48:00 to 2017/05/03 06:17:22
+	In Florida: 2017/05/02 15:48:00 to 2017/05/03 01:17:22
+	Number of rotations from perijove: -1.06, -0.10
+	Juno CML 261.50 	 MinCML 291.97 	 MaxCML 276.23
+	Difference from Juno Observation: 30.47 374.73
+
+Perijove time (UTC): 2017/05/17 05:14:57 - In Florida 2017/05/17 01:14:57 
+florida: 
+ 	From 2017/05/16 20:06:13 to 2017/05/17 04:29:08
+	Number of rotations from perijove: -0.52, 0.33
+	Juno CML 171.20 	 MinCML 36.18 	 MaxCML 340.25
+	Difference from Juno Observation: -135.02 169.05
+arizona: 
+ 	From 2017/05/16 20:20:01 to 2017/05/17 04:33:11
+	In Florida: 2017/05/16 22:20:01 to 2017/05/17 06:33:11
+	Number of rotations from perijove: -0.29, 0.54
+	Juno CML 171.20 	 MinCML 117.08 	 MaxCML 55.25
+	Difference from Juno Observation: -54.12 244.05
+canary: 
+ 	From 2017/05/16 20:56:33 to 2017/05/17 05:18:46
+	In Florida: 2017/05/16 15:56:33 to 2017/05/17 00:18:46
+	Number of rotations from perijove: -0.94, -0.09
+	Juno CML 171.20 	 MinCML 245.23 	 MaxCML 188.87
+	Difference from Juno Observation: 74.03 377.67
+
+Perijove time (UTC): 2017/05/31 04:12:29 - In Florida 2017/05/31 00:12:29 
+arizona: 
+ 	From 2017/05/30 20:29:01 to 2017/05/31 03:36:06
+	In Florida: 2017/05/30 22:29:01 to 2017/05/31 05:36:06
+	Number of rotations from perijove: -0.17, 0.54
+	Juno CML 81.00 	 MinCML 69.86 	 MaxCML 328.06
+	Difference from Juno Observation: -11.14 247.06
+canary: 
+ 	From 2017/05/30 21:04:34 to 2017/05/31 04:21:35
+	In Florida: 2017/05/30 16:04:34 to 2017/05/30 23:21:35
+	Number of rotations from perijove: -0.82, -0.09
+	Juno CML 81.00 	 MinCML 197.43 	 MaxCML 101.64
+	Difference from Juno Observation: 116.43 380.64
+
+Perijove time (UTC): 2017/06/14 03:10:03 - In Florida 2017/06/13 23:10:03 
+florida: 
+ 	From 2017/06/13 20:20:07 to 2017/06/14 02:36:25
+	Number of rotations from perijove: -0.29, 0.35
+	Juno CML 350.70 	 MinCML 298.56 	 MaxCML 166.04
+	Difference from Juno Observation: -52.14 175.34
+cerra: 
+ 	From 2017/06/13 17:50:06 to 2017/06/14 02:15:01
+	In Florida: 2017/06/13 17:50:06 to 2017/06/14 02:15:01
+	Number of rotations from perijove: -0.54, 0.31
+	Juno CML 350.70 	 MinCML 207.86 	 MaxCML 153.10
+	Difference from Juno Observation: -142.84 162.40
+canary: 
+ 	From 2017/06/13 21:10:47 to 2017/06/14 03:26:01
+	In Florida: 2017/06/13 16:10:47 to 2017/06/13 22:26:01
+	Number of rotations from perijove: -0.71, -0.07
+	Juno CML 350.70 	 MinCML 147.82 	 MaxCML 14.67
+	Difference from Juno Observation: -202.88 23.97
+
+Perijove time (UTC): 2017/06/28 03:40:40 - In Florida 2017/06/27 23:40:40 
+florida: 
+ 	From 2017/06/27 20:23:10 to 2017/06/28 01:42:32
+	Number of rotations from perijove: -0.33, 0.21
+	Juno CML 316.70 	 MinCML 246.36 	 MaxCML 79.42
+	Difference from Juno Observation: -70.34 122.72
+cerra: 
+ 	From 2017/06/27 17:53:02 to 2017/06/28 01:22:12
+	In Florida: 2017/06/27 17:53:02 to 2017/06/28 01:22:12
+	Number of rotations from perijove: -0.59, 0.17
+	Juno CML 316.70 	 MinCML 155.60 	 MaxCML 67.13
+	Difference from Juno Observation: -161.10 110.43
+arizona: 
+ 	From 2017/06/27 20:38:47 to 2017/06/28 01:46:36
+	In Florida: 2017/06/27 22:38:47 to 2017/06/28 03:46:36
+	Number of rotations from perijove: -0.10, 0.41
+	Juno CML 316.70 	 MinCML 328.34 	 MaxCML 154.42
+	Difference from Juno Observation: 11.64 197.72
+canary: 
+ 	From 2017/06/27 21:13:53 to 2017/06/28 02:32:06
+	In Florida: 2017/06/27 16:13:53 to 2017/06/27 21:32:06
+	Number of rotations from perijove: -0.75, -0.22
+	Juno CML 316.70 	 MinCML 95.67 	 MaxCML 288.03
+	Difference from Juno Observation: -221.03 -28.67
+
+Perijove time (UTC): 2017/07/12 02:38:12 - In Florida 2017/07/11 22:38:12 
+florida: 
+ 	From 2017/07/11 20:22:08 to 2017/07/12 00:50:12
+	Number of rotations from perijove: -0.23, 0.22
+	Juno CML 226.40 	 MinCML 191.13 	 MaxCML 353.17
+	Difference from Juno Observation: -35.27 126.77
+cerra: 
+ 	From 2017/07/11 17:59:02 to 2017/07/12 00:31:52
+	In Florida: 2017/07/11 17:59:02 to 2017/07/12 00:31:52
+	Number of rotations from perijove: -0.47, 0.19
+	Juno CML 226.40 	 MinCML 104.63 	 MaxCML 342.09
+	Difference from Juno Observation: -121.77 115.69
+canary: 
+ 	From 2017/07/11 21:12:48 to 2017/07/12 01:39:43
+	In Florida: 2017/07/11 16:12:48 to 2017/07/11 20:39:43
+	Number of rotations from perijove: -0.65, -0.20
+	Juno CML 226.40 	 MinCML 40.41 	 MaxCML 201.76
+	Difference from Juno Observation: -185.99 -24.64
+
+Perijove time (UTC): 2017/07/26 01:35:46 - In Florida 2017/07/25 21:35:46 
+florida: 
+ 	From 2017/07/25 20:16:40 to 2017/07/25 23:59:16
+	Number of rotations from perijove: -0.13, 0.24
+	Juno CML 136.20 	 MinCML 132.77 	 MaxCML 267.32
+	Difference from Juno Observation: -3.43 131.12
+cerra: 
+ 	From 2017/07/25 18:06:46 to 2017/07/25 23:43:45
+	In Florida: 2017/07/25 18:06:46 to 2017/07/25 23:43:45
+	Number of rotations from perijove: -0.35, 0.22
+	Juno CML 136.20 	 MinCML 54.25 	 MaxCML 257.94
+	Difference from Juno Observation: -81.95 121.74
+canary: 
+ 	From 2017/07/25 21:07:11 to 2017/07/26 00:48:44
+	In Florida: 2017/07/25 16:07:11 to 2017/07/25 19:48:44
+	Number of rotations from perijove: -0.55, -0.18
+	Juno CML 136.20 	 MinCML 341.97 	 MaxCML 115.88
+	Difference from Juno Observation: 205.77 339.68
+
+Perijove time (UTC): 2017/08/09 00:33:19 - In Florida 2017/08/08 20:33:19 
+florida: 
+ 	From 2017/08/08 20:07:01 to 2017/08/08 23:09:34
+	Number of rotations from perijove: -0.04, 0.26
+	Juno CML 45.90 	 MinCML 71.54 	 MaxCML 181.88
+	Difference from Juno Observation: 25.64 135.98
+cerra: 
+ 	From 2017/08/08 18:14:59 to 2017/08/08 22:57:32
+	In Florida: 2017/08/08 18:14:59 to 2017/08/08 22:57:32
+	Number of rotations from perijove: -0.23, 0.24
+	Juno CML 45.90 	 MinCML 3.82 	 MaxCML 174.60
+	Difference from Juno Observation: -42.08 128.70
+canary: 
+ 	From 2017/08/08 20:57:21 to 2017/08/08 23:58:58
+	In Florida: 2017/08/08 15:57:21 to 2017/08/08 18:58:58
+	Number of rotations from perijove: -0.46, -0.16
+	Juno CML 45.90 	 MinCML 280.63 	 MaxCML 30.40
+	Difference from Juno Observation: 234.73 344.50
+
+Perijove time (UTC): 2017/08/23 00:08:07 - In Florida 2017/08/22 20:08:07 
+cerra: 
+ 	From 2017/08/22 19:23:01 to 2017/08/22 23:12:54
+	In Florida: 2017/08/22 18:23:01 to 2017/08/22 22:12:54
+	Number of rotations from perijove: -0.18, 0.21
+	Juno CML 338.10 	 MinCML 313.03 	 MaxCML 91.98
+	Difference from Juno Observation: -25.07 113.88
+canary: 
+ 	From 2017/08/22 20:44:06 to 2017/08/22 23:10:15
+	In Florida: 2017/08/22 15:44:06 to 2017/08/22 18:10:15
+	Number of rotations from perijove: -0.44, -0.20
+	Juno CML 338.10 	 MinCML 216.98 	 MaxCML 305.32
+	Difference from Juno Observation: -121.12 -32.78
+
+Perijove time (UTC): 2017/09/05 23:05:44 - In Florida 2017/09/05 19:05:44 
+cerra: 
+ 	From 2017/09/05 19:30:41 to 2017/09/05 22:29:35
+	In Florida: 2017/09/05 18:30:41 to 2017/09/05 21:29:35
+	Number of rotations from perijove: -0.06, 0.24
+	Juno CML 247.90 	 MinCML 261.89 	 MaxCML 10.02
+	Difference from Juno Observation: 13.99 122.12
+canary: 
+ 	From 2017/09/05 20:28:31 to 2017/09/05 22:22:26
+	In Florida: 2017/09/05 15:28:31 to 2017/09/05 17:22:26
+	Number of rotations from perijove: -0.37, -0.17
+	Juno CML 247.90 	 MinCML 151.78 	 MaxCML 220.63
+	Difference from Juno Observation: -96.12 -27.27
+
+Perijove time (UTC): 2017/09/19 22:03:21 - In Florida 2017/09/19 18:03:21 
+canary: 
+ 	From 2017/09/19 20:11:47 to 2017/09/19 21:35:21
+	In Florida: 2017/09/19 15:11:47 to 2017/09/19 16:35:21
+	Number of rotations from perijove: -0.29, -0.15
+	Juno CML 157.60 	 MinCML 85.83 	 MaxCML 136.34
+	Difference from Juno Observation: -71.77 -21.26
+
+Perijove time (UTC): 2017/10/03 21:00:55 - In Florida 2017/10/03 17:00:55 
+canary: 
+ 	From 2017/10/03 19:55:07 to 2017/10/03 20:48:50
+	In Florida: 2017/10/03 14:55:07 to 2017/10/03 15:48:50
+	Number of rotations from perijove: -0.21, -0.12
+	Juno CML 67.40 	 MinCML 19.94 	 MaxCML 52.41
+	Difference from Juno Observation: -47.46 -14.99
+
+Perijove time (UTC): 2017/10/17 20:35:43 - In Florida 2017/10/17 16:35:43 
+canary: 
+ 	From 2017/10/17 19:39:48 to 2017/10/17 20:02:46
+	In Florida: 2017/10/17 14:39:48 to 2017/10/17 15:02:46
+	Number of rotations from perijove: -0.20, -0.16
+	Juno CML 359.60 	 MinCML 314.96 	 MaxCML 328.84
+	Difference from Juno Observation: -44.64 -30.76
+
+Perijove time (UTC): 2017/10/31 19:33:14 - In Florida 2017/10/31 15:33:14 
+arizona: 
+ 	From 2017/11/01 07:23:56 to 2017/11/01 07:45:05
+	In Florida: 2017/11/01 09:23:56 to 2017/11/01 09:45:05
+	Number of rotations from perijove: 1.80, 1.84
+	Juno CML 269.30 	 MinCML 218.81 	 MaxCML 231.60
+	Difference from Juno Observation: -50.49 -37.70
+
+Perijove time (UTC): 2017/11/14 18:30:45 - In Florida 2017/11/14 13:30:45 
+arizona: 
+ 	From 2017/11/15 05:43:12 to 2017/11/15 06:57:10
+	In Florida: 2017/11/15 07:43:12 to 2017/11/15 08:57:10
+	Number of rotations from perijove: 1.84, 1.96
+	Juno CML 179.00 	 MinCML 138.97 	 MaxCML 183.59
+	Difference from Juno Observation: -40.03 4.59
+
+Perijove time (UTC): 2017/11/28 17:28:16 - In Florida 2017/11/28 12:28:16 
+florida: 
+ 	From 2017/11/29 04:51:13 to 2017/11/29 06:55:02
+	Number of rotations from perijove: 1.65, 1.86
+	Juno CML 88.80 	 MinCML 339.99 	 MaxCML 54.84
+	Difference from Juno Observation: 251.19 326.04
+arizona: 
+ 	From 2017/11/29 05:02:06 to 2017/11/29 07:09:26
+	In Florida: 2017/11/29 07:02:06 to 2017/11/29 09:09:26
+	Number of rotations from perijove: 1.88, 2.09
+	Juno CML 88.80 	 MinCML 59.11 	 MaxCML 135.99
+	Difference from Juno Observation: -29.69 47.19
+
+Perijove time (UTC): 2017/12/12 17:02:53 - In Florida 2017/12/12 12:02:53 
+florida: 
+ 	From 2017/12/13 04:09:06 to 2017/12/13 07:05:00
+	Number of rotations from perijove: 1.63, 1.92
+	Juno CML 20.90 	 MinCML 259.86 	 MaxCML 6.19
+	Difference from Juno Observation: 238.96 345.29
+
+Perijove time (UTC): 2017/12/26 16:00:20 - In Florida 2017/12/26 11:00:20 
+florida: 
+ 	From 2017/12/27 03:26:01 to 2017/12/27 07:12:13
+	Number of rotations from perijove: 1.66, 2.04
+	Juno CML 290.60 	 MinCML 179.54 	 MaxCML 316.28
+	Difference from Juno Observation: -111.06 25.68
+arizona: 
+ 	From 2017/12/27 03:37:33 to 2017/12/27 07:27:24
+	In Florida: 2017/12/27 05:37:33 to 2017/12/27 09:27:24
+	Number of rotations from perijove: 1.88, 2.27
+	Juno CML 290.60 	 MinCML 259.05 	 MaxCML 37.92
+	Difference from Juno Observation: -31.55 107.32
+
+Perijove time (UTC): 2018/01/09 14:57:50 - In Florida 2018/01/09 09:57:50 
+florida: 
+ 	From 2018/01/10 02:41:36 to 2018/01/10 07:15:04
+	Number of rotations from perijove: 1.69, 2.15
+	Juno CML 200.30 	 MinCML 98.85 	 MaxCML 264.17
+	Difference from Juno Observation: -101.45 63.87
+cerra: 
+ 	From 2018/01/10 02:47:37 to 2018/01/10 06:51:58
+	In Florida: 2018/01/10 00:47:37 to 2018/01/10 04:51:58
+	Number of rotations from perijove: 1.50, 1.91
+	Juno CML 200.30 	 MinCML 29.94 	 MaxCML 177.66
+	Difference from Juno Observation: -170.36 -22.64
+arizona: 
+ 	From 2018/01/10 02:53:23 to 2018/01/10 07:29:33
+	In Florida: 2018/01/10 04:53:23 to 2018/01/10 09:29:33
+	Number of rotations from perijove: 1.91, 2.38
+	Juno CML 200.30 	 MinCML 178.52 	 MaxCML 345.39
+	Difference from Juno Observation: -21.78 145.09
+
+Perijove time (UTC): 2018/01/23 13:55:18 - In Florida 2018/01/23 08:55:18 
+florida: 
+ 	From 2018/01/24 01:55:29 to 2018/01/24 07:12:52
+	Number of rotations from perijove: 1.72, 2.25
+	Juno CML 109.90 	 MinCML 17.61 	 MaxCML 209.49
+	Difference from Juno Observation: -92.29 99.59
+cerra: 
+ 	From 2018/01/24 01:59:04 to 2018/01/24 07:04:12
+	In Florida: 2018/01/23 23:59:04 to 2018/01/24 05:04:12
+	Number of rotations from perijove: 1.52, 2.04
+	Juno CML 109.90 	 MinCML 307.23 	 MaxCML 131.70
+	Difference from Juno Observation: 197.33 381.80
+arizona: 
+ 	From 2018/01/22 17:53:16 to 2018/01/23 12:47:53
+	In Florida: 2018/01/22 19:53:16 to 2018/01/23 14:47:53
+	Number of rotations from perijove: -1.32, 0.59
+	Juno CML 109.90 	 MinCML 8.14 	 MaxCML 334.00
+	Difference from Juno Observation: -101.76 224.10
+
+Perijove time (UTC): 2018/02/06 12:52:47 - In Florida 2018/02/06 07:52:47 
+canary: 
+ 	From 2018/02/07 01:58:08 to 2018/02/07 07:55:55
+	In Florida: 2018/02/06 20:58:08 to 2018/02/07 02:55:55
+	Number of rotations from perijove: 1.32, 1.92
+	Juno CML 19.60 	 MinCML 144.98 	 MaxCML 1.30
+	Difference from Juno Observation: 125.38 341.70
+
+Perijove time (UTC): 2018/02/20 11:39:44 - In Florida 2018/02/20 06:39:44 
+florida: 
+ 	From 2018/02/19 18:16:26 to 2018/02/20 11:07:26
+	Number of rotations from perijove: -1.25, 0.45
+	Juno CML 282.90 	 MinCML 204.32 	 MaxCML 95.51
+	Difference from Juno Observation: -78.58 172.61
+cerra: 
+ 	From 2018/02/21 00:17:30 to 2018/02/21 07:27:53
+	In Florida: 2018/02/20 22:17:30 to 2018/02/21 05:27:53
+	Number of rotations from perijove: 1.58, 2.30
+	Juno CML 282.90 	 MinCML 140.64 	 MaxCML 40.86
+	Difference from Juno Observation: -142.26 117.96
+arizona: 
+ 	From 2018/02/19 18:18:21 to 2018/02/20 11:06:19
+	In Florida: 2018/02/19 20:18:21 to 2018/02/20 13:06:19
+	Number of rotations from perijove: -1.05, 0.65
+	Juno CML 282.90 	 MinCML 278.04 	 MaxCML 167.39
+	Difference from Juno Observation: -4.86 244.49
+canary: 
+ 	From 2018/02/21 01:07:35 to 2018/02/21 07:44:29
+	In Florida: 2018/02/20 20:07:35 to 2018/02/21 02:44:29
+	Number of rotations from perijove: 1.36, 2.03
+	Juno CML 282.90 	 MinCML 62.09 	 MaxCML 302.06
+	Difference from Juno Observation: -220.81 19.16
+
