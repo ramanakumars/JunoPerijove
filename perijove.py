@@ -2,8 +2,19 @@ import numpy as np
 from datetime import datetime, timedelta
 from pytz import timezone
 import pytz
-import ephem
-from astropy.time import Time
+import sys
+
+try:
+	import ephem
+except ImportError:
+	print("You need pyephem to run this code. If you have pip, use pip install pyephem")
+	sys.exit(1)
+	
+try:
+	from astropy.time import Time
+except ImportError:
+	print("You need astropy to run this code. If you have pip, use pip install astropy")
+	sys.exit(1)
 
 ## REQUIRED #############################################################
 # This code requires astropy and pyephem. To install use python-pip:	#
@@ -102,7 +113,7 @@ obs = {"florida": floridaobs, "cerra": cerraobs, "arizona": kittobs, "canary": c
 file = open('perijove_dat.txt','r')
 
 ## Open the outfile for writing ##
-out = open('perijove_cml.dat','w')
+out = open('perijove_cml_new.dat','w')
 
 jup_rotation = 9.9
 
@@ -117,6 +128,9 @@ for line in file:
 	## Get the datetime data ##
 	month, day, year = str.split(dat[2],"/")
 	hour, min, sec = str.split(dat[3],":")
+	
+	## CML dat[21]
+	cml_juno = np.float(dat[21])
 
 	## Set up the UTC timezone and convert the perijove times to UTC ##
 	utc = pytz.utc	
@@ -137,157 +151,166 @@ for line in file:
 	
 	## Line defines the output string. We will add to it at each loop and write out this "line" ##
 	line = "Perijove time (UTC): %s - In Florida %s "%(date.strftime(fmt), date.astimezone(florida).strftime(fmt)) + "\n"
-	
-	for timez in ['florida','cerra','arizona','canary']:
-		## Select the timezone and observatory ##
-		tz = tzs[timez]
-		observe = obs[timez]
-		
-		## Set the perijove date and time ##
-		peri = date
-		## Match the date of the observatory to the perijove date and time ##
-		observe.date = peri.strftime(fmt)
-		
-		## Get the time of the perijove at the local observatory ##
-		perilocal = date.astimezone(tz)
-		
-		## Set up the observables as Jupiter and Sun 
-		##(we are not observing Sun, but we need its position)
-		jup = ephem.Jupiter()
-		sun = ephem.Sun()
-		
-		## Get the following in the UTC timezone:
-		##	- previous jupiter rise/set
-		## 	- next jupiter rise/set
-		## 	- previous sun rise/set
-		##	- next sun rise/set
-		
-		jupprevrise = observe.previous_rising(jup)
-		jupprevrise = jupprevrise.datetime()
-		jupprevrise = jupprevrise.replace(tzinfo=utc)
-		
-		jupnextrise = observe.next_rising(jup)
-		jupnextrise = jupnextrise.datetime()
-		jupnextrise = jupnextrise.replace(tzinfo=utc)
-		
-		
-		jupprevset = observe.previous_setting(jup)
-		jupprevset = jupprevset.datetime()
-		jupprevset = jupprevset.replace(tzinfo=utc)
-		
-		jupnextset = observe.next_setting(jup)
-		jupnextset = jupnextset.datetime()
-		jupnextset = jupnextset.replace(tzinfo=utc)
-		
-		sunprevrise = observe.previous_rising(sun)
-		sunprevrise = sunprevrise.datetime()
-		sunprevrise = sunprevrise.replace(tzinfo=utc)
-		
-		sunnextrise = observe.next_rising(sun)
-		sunnextrise = sunnextrise.datetime()
-		sunnextrise = sunnextrise.replace(tzinfo=utc)
-		
-		
-		sunprevset = observe.previous_setting(sun)
-		sunprevset = sunprevset.datetime()
-		sunprevset = sunprevset.replace(tzinfo=utc)
-		
-		sunnextset = observe.next_setting(sun)
-		sunnextset = sunnextset.datetime()
-		sunnextset = sunnextset.replace(tzinfo=utc)
-		
-		
-		## For this part, see the POSSIBILITIES comment below ##
-		if(jupprevrise > jupprevset):	# i.e. jupiter is up right now
-			if(sunprevrise > sunprevset):	# i.e. sun is up
-				if(jupnextset > sunnextset):	# i.e. sun sets first
-					mintime = sunnextset
-					maxtime = jupnextset
-				if(sunnextset > jupnextset):	# i.e. jupiter sets first
-					mintime = jupnextrise
-					maxtime = sunnextrise
-			else:	# sun is down right now 
-			#(i.e. sun set first, since jupiter is still up)
-				mintime = sunprevset
-				maxtime = jupnextset
-		else:	# jupiter is down
-			if(sunprevrise > sunprevset):	# i.e. sun is up
-				# then jupiter sets first
-				mintime = jupnextrise
-				maxtime = sunnextrise
-			else:	# sun is down right now 
-				if(jupprevset > sunprevset):	# i.e. sun sets first
-					mintime = sunprevset
-					maxtime = jupprevset
-				elif(jupnextrise < sunnextrise):	# jupiter sets first
-					mintime = jupnextrise
-					maxtime = sunnextrise
-		## CML dat[21]
-		cml_juno = np.float(dat[21])
-
-		## Get the times to get the CML from min and maxtime above
-		mintimecml = Time(mintime.strftime(cmlfmt),format='isot', scale='utc')
-		maxtimecml = Time(maxtime.strftime(cmlfmt),format='isot', scale='utc')
-		
-		## Calculate CML at min and max times
-		mincml = cmlsys3(mintimecml.jd)[0]
-		maxcml = cmlsys3(maxtimecml.jd)[0]
-		
-		## Save the originals for printout 
-		mincmlorig = mincml
-		maxcmlorig = maxcml
-		
-		## If maxcml goes to the next orbit, add 360
-		if(maxcml < mincml): 
-			maxcml = maxcml + 360.
-		
-		## Calculate the differences
-		mindiffcml = mincml - cml_juno
-		maxdiffcml = maxcml - cml_juno
-		
-		## Our observing windows is from mintime to maxtime ##
-		mintime = mintime.astimezone(tz)
-		maxtime = maxtime.astimezone(tz)
-		
-		### HERE: ###################################################################
-		## We need to get the CML (Central meridian longitude) of Jupiter and Juno	#
-		## and compare the two, to see where Juno is relative to where we are 		#
-		## seeing it. Once we have this info, we can get the number of rotations to	#
-		## get the same field of view of Jupiter that Juno saw. 					#
-		#############################################################################
-		
-		printout = True
-		
-		if((np.abs(mindiffcml) < 40.) or (np.abs(maxdiffcml) < 40.)):
-			## If the CML's are within 40degrees of Juno
-			printout = True
-		elif((mindiffcml < 0.) and (maxdiffcml > 0)):
-			## If the CML crosses the +- 40 region over the observing window
-			## This is for cases where the window is more than 1/2 Jupiter rotation
-			## i.e. >5-6 hours
-			printout = True
+	dateorig = date
+	for dayi in range(-2,3):
+		date = dateorig + timedelta(days = dayi)
+		if(dayi < 0):
+			line = line + "%d days before perijove \n"%(-dayi)
+		elif(dayi > 0):
+			line = line + "%d days after perijove \n"%(dayi)
 		else:
-			printout = False
-		
-		if(printout):
-			## Get the number of rotations of mintime and maxtime from the perijove ##
-			mindiff = (mintime - perilocal).total_seconds()/(3600.*jup_rotation)
-			maxdiff = (maxtime - perilocal).total_seconds()/(3600.*jup_rotation)
+			line = line + "Day of perijove \n"
+		for timez in ['florida','cerra','arizona','canary']:
+			## Select the timezone and observatory ##
+			tz = tzs[timez]
+			observe = obs[timez]
 			
-			## Add that info to the output line ##
-			line = line + "%s: \n \tFrom %s to %s\n"%(timez,mintime.strftime(fmt), maxtime.strftime(fmt))
+			## Set the perijove date and time ##
+			peri = date
+			## Match the date of the observatory to the perijove date and time ##
+			observe.date = peri.strftime(fmt)
 			
-			## If it is not Florida, convert to EST ##
-			if(timez != "florida"):
-				mintime = mintime.astimezone(tzs['florida'])
-				maxtime = maxtime.astimezone(tzs['florida'])
-				## And write that out ##
-				line = line + "\tIn Florida: %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
+			## Get the time of the perijove at the local observatory ##
+			perilocal = date.astimezone(tz)
 			
-			## Add the number of rotations from perijove ##
-			line = line + "\tNumber of rotations from perijove: %.2f, %.2f\n"%(mindiff,maxdiff)
-			line = line + "\tJuno CML %.2f \t MinCML %.2f \t MaxCML %.2f\n"%(cml_juno, mincmlorig,maxcmlorig)
-			line = line + "\tDifference from Juno Observation: %.2f %.2f\n"%(mindiffcml,maxdiffcml)
+			## Set up the observables as Jupiter and Sun 
+			##(we are not observing Sun, but we need its position)
+			jup = ephem.Jupiter()
+			sun = ephem.Sun()
+			
+			## Get the following in the UTC timezone:
+			##	- previous jupiter rise/set
+			## 	- next jupiter rise/set
+			## 	- previous sun rise/set
+			##	- next sun rise/set
+			
+			jupprevrise = observe.previous_rising(jup)
+			jupprevrise = jupprevrise.datetime()
+			jupprevrise = jupprevrise.replace(tzinfo=utc)
+			
+			jupnextrise = observe.next_rising(jup)
+			jupnextrise = jupnextrise.datetime()
+			jupnextrise = jupnextrise.replace(tzinfo=utc)
+			
+			
+			jupprevset = observe.previous_setting(jup)
+			jupprevset = jupprevset.datetime()
+			jupprevset = jupprevset.replace(tzinfo=utc)
+			
+			jupnextset = observe.next_setting(jup)
+			jupnextset = jupnextset.datetime()
+			jupnextset = jupnextset.replace(tzinfo=utc)
+			
+			sunprevrise = observe.previous_rising(sun)
+			sunprevrise = sunprevrise.datetime()
+			sunprevrise = sunprevrise.replace(tzinfo=utc)
+			
+			sunnextrise = observe.next_rising(sun)
+			sunnextrise = sunnextrise.datetime()
+			sunnextrise = sunnextrise.replace(tzinfo=utc)
+			
+			
+			sunprevset = observe.previous_setting(sun)
+			sunprevset = sunprevset.datetime()
+			sunprevset = sunprevset.replace(tzinfo=utc)
+			
+			sunnextset = observe.next_setting(sun)
+			sunnextset = sunnextset.datetime()
+			sunnextset = sunnextset.replace(tzinfo=utc)
+			
+			
+			## For this part, see the POSSIBILITIES comment below ##
+			if(jupprevrise > jupprevset):	# i.e. jupiter is up right now
+				if(sunprevrise > sunprevset):	# i.e. sun is up
+					if(jupnextset > sunnextset):	# i.e. sun sets first
+						mintime = sunnextset
+						maxtime = jupnextset
+					if(sunnextset > jupnextset):	# i.e. jupiter sets first
+						mintime = jupnextrise
+						maxtime = sunnextrise
+				else:	# sun is down right now 
+				#(i.e. sun set first, since jupiter is still up)
+					mintime = sunprevset
+					maxtime = jupnextset
+			else:	# jupiter is down
+				if(sunprevrise > sunprevset):	# i.e. sun is up
+					# then jupiter sets first
+					mintime = jupnextrise
+					maxtime = sunnextrise
+				else:	# sun is down right now 
+					if(jupprevset > sunprevset):	# i.e. sun sets first
+						mintime = sunprevset
+						maxtime = jupprevset
+					elif(jupnextrise < sunnextrise):	# jupiter sets first
+						mintime = jupnextrise
+						maxtime = sunnextrise
+
+			## Get the times to get the CML from min and maxtime above
+			mintimecml = Time(mintime.strftime(cmlfmt),format='isot', scale='utc')
+			maxtimecml = Time(maxtime.strftime(cmlfmt),format='isot', scale='utc')
+			
+			## Calculate CML at min and max times
+			mincml = cmlsys3(mintimecml.jd)[0]
+			maxcml = cmlsys3(maxtimecml.jd)[0]
+			
+			## Save the originals for printout 
+			mincmlorig = mincml
+			maxcmlorig = maxcml
+			
+			## If maxcml goes to the next orbit, add 360
+			if(maxcml < mincml): 
+				maxcml = maxcml + 360.
+			
+			## Calculate the differences
+			mindiffcml = mincml - cml_juno
+			maxdiffcml = maxcml - cml_juno
+			
+			## Our observing windows is from mintime to maxtime ##
+			mintime = mintime.astimezone(tz)
+			maxtime = maxtime.astimezone(tz)
+			
+			### HERE: ###################################################################
+			## We need to get the CML (Central meridian longitude) of Jupiter and Juno	#
+			## and compare the two, to see where Juno is relative to where we are 		#
+			## seeing it. Once we have this info, we can get the number of rotations to	#
+			## get the same field of view of Jupiter that Juno saw. 					#
+			#############################################################################
+			
+			printout = True
+			
+			if((np.abs(mindiffcml) < 40.) or (np.abs(maxdiffcml) < 40.)):
+				## If the CML's are within 40degrees of Juno
+				printout = True
+			elif((mindiffcml < 0.) and (maxdiffcml > 0)):
+				## If the CML crosses the +- 40 region over the observing window
+				## This is for cases where the window is more than 1/2 Jupiter rotation
+				## i.e. >5-6 hours
+				printout = True
+			else:
+				printout = False
+				#printout = True
+			
+			if(printout):
+				## Get the number of rotations of mintime and maxtime from the perijove ##
+				mindiff = (mintime - perilocal).total_seconds()/(3600.*jup_rotation) + dayi*(24./jup_rotation)
+				maxdiff = (maxtime - perilocal).total_seconds()/(3600.*jup_rotation) + dayi*(24./jup_rotation)
+				
+				## Add that info to the output line ##
+				line = line + "  %s: \n \tFrom %s to %s\n"%(timez,mintime.strftime(fmt), maxtime.strftime(fmt))
+				
+				## If it is not Florida, convert to EST ##
+				if(timez != "florida"):
+					mintime = mintime.astimezone(tzs['florida'])
+					maxtime = maxtime.astimezone(tzs['florida'])
+					## And write that out ##
+					line = line + "\tIn Florida: %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
+				
+				## Add the number of rotations from perijove ##
+				line = line + "\tNumber of rotations from perijove: %.2f, %.2f\n"%(mindiff,maxdiff)
+				line = line + "\tJuno CML %.2f \t MinCML %.2f \t MaxCML %.2f\n"%(cml_juno, mincmlorig,maxcmlorig)
+				line = line + "\tDifference from Juno Observation: %.2f %.2f\n"%(mindiffcml,maxdiffcml)
+	line = line + "\n" ## Linebreak for clarity
+	line = line + "---------------------------------------------------------------------\n"
 	line = line + "\n" ## Linebreak for clarity
 	## Write it out
 	out.write(line)
