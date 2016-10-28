@@ -113,7 +113,7 @@ obs = {"florida": floridaobs, "cerra": cerraobs, "arizona": kittobs, "canary": c
 file = open('perijove_dat.txt','r')
 
 ## Open the outfile for writing ##
-out = open('perijove_cml_new.dat','w')
+out = open('perijove_cml_new_h.dat','w')
 
 jup_rotation = 9.9
 
@@ -296,7 +296,8 @@ for line in file:
 				maxdiff = (maxtime - perilocal).total_seconds()/(3600.*jup_rotation) + dayi*(24./jup_rotation)
 				
 				## Add that info to the output line ##
-				line = line + "  %s: \n \tFrom %s to %s\n"%(timez,mintime.strftime(fmt), maxtime.strftime(fmt))
+				line = line + "  %s: \n "%(timez)
+				#line = line + "\tFrom %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
 				
 				## If it is not Florida, convert to EST ##
 				if(timez != "florida"):
@@ -306,8 +307,8 @@ for line in file:
 					line = line + "\tIn Florida: %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
 				
 				## Add the number of rotations from perijove ##
-				line = line + "\tNumber of rotations from perijove: %.2f, %.2f\n"%(mindiff,maxdiff)
-				line = line + "\tJuno CML %.2f \t MinCML %.2f \t MaxCML %.2f\n"%(cml_juno, mincmlorig,maxcmlorig)
+				#line = line + "\tNumber of rotations from perijove: %.2f, %.2f\n"%(mindiff,maxdiff)
+				#line = line + "\tJuno CML %.2f \t MinCML %.2f \t MaxCML %.2f\n"%(cml_juno, mincmlorig,maxcmlorig)
 				line = line + "\tDifference from Juno Observation: %.2f %.2f\n"%(mindiffcml,maxdiffcml)
 	line = line + "\n" ## Linebreak for clarity
 	line = line + "---------------------------------------------------------------------\n"
