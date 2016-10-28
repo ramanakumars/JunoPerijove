@@ -223,15 +223,24 @@ for line in file:
 			if(jupprevrise > jupprevset):	# i.e. jupiter is up right now
 				if(sunprevrise > sunprevset):	# i.e. sun is up
 					if(jupnextset > sunnextset):	# i.e. sun sets first
+						condition = "JU SU SF"
 						mintime = sunnextset
 						maxtime = jupnextset
 					if(sunnextset > jupnextset):	# i.e. jupiter sets first
+						condition = "JU SU JF"
 						mintime = jupnextrise
 						maxtime = sunnextrise
 				else:	# sun is down right now 
 				#(i.e. sun set first, since jupiter is still up)
-					mintime = sunprevset
-					maxtime = jupnextset
+					condition = "JU SD JU"
+					if(jupprevrise > sunprevset):
+						mintime = jupprevrise
+					else:
+						mintime = sunprevset
+					if(jupnextset < sunnextrise):
+						maxtime = jupnextset
+					else:
+						maxtime = sunnextrise
 			else:	# jupiter is down
 				if(sunprevrise > sunprevset):	# i.e. sun is up
 					# then jupiter sets first
@@ -304,7 +313,7 @@ for line in file:
 					mintime = mintime.astimezone(tzs['florida'])
 					maxtime = maxtime.astimezone(tzs['florida'])
 					## And write that out ##
-					line = line + "\tIn Florida: %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
+				line = line + "\tIn Florida: %s to %s\n"%(mintime.strftime(fmt), maxtime.strftime(fmt))
 				
 				## Add the number of rotations from perijove ##
 				#line = line + "\tNumber of rotations from perijove: %.2f, %.2f\n"%(mindiff,maxdiff)
