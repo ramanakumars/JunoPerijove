@@ -110,10 +110,10 @@ cerraobs.long = '-70:48:21'
 obs = {"florida": floridaobs, "cerra": cerraobs, "arizona": kittobs, "canary": canaryobs}
 
 ## Get the perijove data ##
-file = open('perijove_dat.txt','r')
+file = open('perilist.dat','r')
 
 ## Open the outfile for writing ##
-out = open('perijove_cml_new_h.dat','w')
+out = open('perijove_cml_newio_h.dat','w')
 
 jup_rotation = 9.9
 
@@ -126,11 +126,11 @@ for line in file:
 	dat = str.split(line)
 	
 	## Get the datetime data ##
-	month, day, year = str.split(dat[2],"/")
-	hour, min, sec = str.split(dat[3],":")
+	month, day, year = str.split(dat[0],"/")
+	hour, min, sec = str.split(dat[1],":")
 	
 	## CML dat[21]
-	cml_juno = np.float(dat[21])
+	cml_juno = np.float(dat[2])
 
 	## Set up the UTC timezone and convert the perijove times to UTC ##
 	utc = pytz.utc	
