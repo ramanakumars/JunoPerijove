@@ -113,7 +113,7 @@ obs = {"florida": floridaobs, "cerra": cerraobs, "arizona": kittobs, "canary": c
 file = open('perilist.dat','r')
 
 ## Open the outfile for writing ##
-out = open('perijove_cml_newio_h.dat','w')
+out = open('perijove_cml_newio_h_all.dat','w')
 
 jup_rotation = 9.9
 
@@ -296,8 +296,8 @@ for line in file:
 				## i.e. >5-6 hours
 				printout = True
 			else:
-				printout = False
-				#printout = True
+				#printout = False
+				printout = True
 			
 			if(printout):
 				## Get the number of rotations of mintime and maxtime from the perijove ##
